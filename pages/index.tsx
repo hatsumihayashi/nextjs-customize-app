@@ -1,6 +1,34 @@
+import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+
+const Card = styled.a`
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #0070f3;
+    border-color: #0070f3;
+  }
+`
+const CardTitle = styled.h2`
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+`
+const CardContent = styled.p`
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+`
 
 const Home: NextPage = () => {
   return (
@@ -28,27 +56,33 @@ const Home: NextPage = () => {
           </code>
         </p>
         <div className="flex content-center justify-center flex-wrap max-w-screen-md">
-          <a href="https://nextjs.org/docs">
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Card href="https://nextjs.org/docs">
+            <CardTitle>Documentation &rarr;</CardTitle>
+            <CardContent>
+              Find in-depth information about Next.js features and API.
+            </CardContent>
+          </Card>
 
-          <a href="https://nextjs.org/learn">
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Card href="https://nextjs.org/learn">
+            <CardTitle>Learn &rarr;</CardTitle>
+            <CardContent>
+              Learn about Next.js in an interactive course with quizzes!
+            </CardContent>
+          </Card>
 
-          <a href="https://github.com/vercel/next.js/tree/canary/examples">
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Card href="https://github.com/vercel/next.js/tree/canary/examples">
+            <CardTitle>Examples &rarr;</CardTitle>
+            <CardContent>
+              Discover and deploy boilerplate example Next.js projects.
+            </CardContent>
+          </Card>
 
-          <a href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
-            <h2>Deploy &rarr;</h2>
-            <p>
+          <Card href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
+            <CardTitle>Deploy &rarr;</CardTitle>
+            <CardContent>
               Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            </CardContent>
+          </Card>
         </div>
       </main>
 
