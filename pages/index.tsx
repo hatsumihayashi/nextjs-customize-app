@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="min-h-screen px-16 flex-1 flex flex-col justify-center content-center">
-        <h1>
+        <div className="text-5xl text-center m-8">
           Welcome to{' '}
           <a
             href="https://nextjs.org"
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
           >
             Next.js!
           </a>
-        </h1>
+        </div>
         <p className="mx-16 text-base text-center">
           Get started by editing{' '}
           <code className="bg-neutral-600 border-r-4 p-3 text-lg font-mono">
