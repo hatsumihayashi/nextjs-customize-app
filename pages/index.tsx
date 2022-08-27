@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen px-16 flex-1 flex flex-col justify-center content-center">
+      <main className="min-h-screen px-16 flex-1 flex flex-col place-content-center">
         <div className="text-5xl text-center m-8">
           Welcome to{' '}
           <a
@@ -49,13 +49,13 @@ const Home: NextPage = () => {
             Next.js!
           </a>
         </div>
-        <p className="mx-16 text-base text-center">
+        <p className="mx-16 my-4 text-base text-center">
           Get started by editing{' '}
           <code className="bg-neutral-600 border-r-4 p-3 text-lg font-mono">
             pages/index.tsx
           </code>
         </p>
-        <div className="flex content-center justify-center flex-wrap max-w-screen-md">
+        <div className="flex content-center justify-center flex-wrap max-w-screen-md mx-auto">
           <Card href="https://nextjs.org/docs">
             <CardTitle>Documentation &rarr;</CardTitle>
             <CardContent>
