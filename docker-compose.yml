@@ -9,6 +9,16 @@ services:
     command: ['sh', '-c', 'yarn && yarn dev']
     ports:
       - 3000:3000
+    depends_on:
+      - db
+  db:
+    image: postgres:14.5-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - db:/var/lib/postgresql/data
 
 volumes:
   node_modules:
+  db:
